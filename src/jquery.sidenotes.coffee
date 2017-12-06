@@ -110,7 +110,7 @@ do ($ = jQuery, window, document) ->
       # Element that contains the footnotes
       # Only necessary if `hideFootnoteContainer` option is true
       @$footnoteContainer = $(@options.footnoteContainerSelector, scope) if @options.hideFootnoteContainer
-      @$footnoteContainer = if @$footnoteContainer.size() isnt 0 then @$footnoteContainer else null
+      @$footnoteContainer = if @$footnoteContainer.length isnt 0 then @$footnoteContainer else null
 
       # Element that contains all the post's content and footnotes
       # Direct parent element of Markdown-generated content
@@ -301,7 +301,7 @@ do ($ = jQuery, window, document) ->
 
       # Find superscript element, if it exists
       @$refMarkSup = @$refMarkAnchor.parent('sup')
-      @$refMarkSup = if @$refMarkSup.size() isnt 0 then @$refMarkSup else null
+      @$refMarkSup = if @$refMarkSup.length isnt 0 then @$refMarkSup else null
 
       # Check if footnote is nested (references another footnote)
       # If so, find the note that it references
