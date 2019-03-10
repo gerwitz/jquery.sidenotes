@@ -319,6 +319,8 @@ do ($ = jQuery, window, document) ->
 
       # Find the ID of the reference mark
       @refMarkID = @refMark().attr('id')
+      if @refMarkID == null
+        @refMarkID = @$refMarkAnchor.attr('id');
 
       # A post's sidenotes may be numbered differently than its footnotes, since we allow the option for reference-less notes
       # When the sidenotes are hidden, we'll need to update the references back to their original value
